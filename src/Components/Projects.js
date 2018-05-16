@@ -3,11 +3,7 @@ import ProjectItem from './ProjectItem';
 
 class Projects extends Component {
     render(){
-        console.log(this.props.projects)
-        // (this.props.projects) ? projectNames = this.props.projects.map(projectName => {
-        //     console.log(projectName)
-        // })
-        let projectNames
+        let projectNames;
         if(this.props.projects){
             projectNames = this.props.projects.map(projectName => {
                 return (
@@ -16,9 +12,9 @@ class Projects extends Component {
             })
         }
         return (
-            <div className="Projects">
+            <ul className="Projects">
                 {projectNames}
-            </div>
+            </ul>
         )
     }
 }
