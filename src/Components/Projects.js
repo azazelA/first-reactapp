@@ -1,33 +1,23 @@
 import React, { Component } from 'react';
+import ProjectItem from './ProjectItem';
 
 class Projects extends Component {
-    constructor(props) {
-        super(props);
-        // State is always defined inside the constructor
-        this.state = {date: new Date()};
-    }
-    // Lifecycle Hooks
-    componentDidMount() {
-        this.timerID = setInterval(
-            () => this.tick(),
-            1000
-        );
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timerID);
-    }
-    tick() {
-        // Set State
-        this.setState({
-            date: new Date()
-        });
-    }
     render(){
+        console.log(this.props.projects)
+        // (this.props.projects) ? projectNames = this.props.projects.map(projectName => {
+        //     console.log(projectName)
+        // })
+        let projectNames
+        if(this.props.projects){
+            projectNames = this.props.projects.map(projectName => {
+                return (
+                    <ProjectItem project={projectName} key={projectName.title}/>
+                )
+            })
+        }
         return (
             <div className="Projects">
-                <h1>My Timer</h1>
-                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+                {projectNames}
             </div>
         )
     }
