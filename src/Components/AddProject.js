@@ -1,20 +1,37 @@
 import React, { Component } from 'react';
+import uuid from 'uuid';
 
 class AddProject extends Component {
+    constructor(){
+        super();
+        this.state = {
+            newProject: {}
+        }
+    }
     static defaultProps = {
         categories: ['Surveillance System', 'Lead Generation', "Security"]
     }
     handleSubmit(e){
-        console.log('Submitted')
         e.preventDefault();
+        if(this.refs.title.value && this.refs.title.value){
+        this.setState({newProject:{
+            id: uuid.v4(),
+            title: this.refs.title.value,
+            category: this.refs.category.value
+            }}, function () {
+            this.props.addProject(this.state.newProject)
+        })
+        }else {
+            alert('You cannot submit blank data!')
+        }
     }
     render(){
         let categoryOptions = this.props.categories.map(category => {
-            return <option key={category}>{category}</option>
+            return <option key={category} value={category}>{category}</option>
         })
         return (
             <div className="AddProject">
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit.bind(this)}>
                     <div className="input-field input">
                         <label htmlFor="title">Title:</label>
                         <input type="text" ref="title"/>
