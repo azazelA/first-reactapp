@@ -82,6 +82,7 @@ body {
     border-radius: 5px;
     font-size: 1em;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 .currentProjects {
     margin: 2em 0;
