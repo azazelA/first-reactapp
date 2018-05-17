@@ -24,4 +24,8 @@ class Projects extends Component {
         )
     }
 }
+Projects.propTypes = {
+    projects: propTypes.array,
+    onDelete: propTypes.func
+}
 export default Projects;
