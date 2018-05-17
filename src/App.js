@@ -23,8 +23,8 @@ class Smk extends Component {
                 },
                 {
                     id: uuid.v4(),
-                    title: "Live Leads",
-                    category: "B2B lead generation"
+                    title: "Lead generation",
+                    category: "Web Scraping"
                 },
                 {
                     id: uuid.v4(),
@@ -39,12 +39,18 @@ class Smk extends Component {
         currentProjects.push(newProject);
         this.setState({projects: currentProjects});
     }
+    handleDeleteProject(id){
+        let currentProjects = this.state.projects,
+            index = currentProjects.findIndex(x => x.id === id);
+        currentProjects.splice(index, 1);
+        this.setState({projects: currentProjects});
+    }
     render(){
         return (
             <div className="App">
                 <h1>Self Projects <span><img src={logo} alt="Self Projects"/></span></h1>
                 <AddProject addProject={this.handleAddProject.bind(this)}/>
-                <Projects projects={this.state.projects}/>
+                <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/>
 
             </div>
         )

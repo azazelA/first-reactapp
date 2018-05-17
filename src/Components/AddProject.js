@@ -9,7 +9,7 @@ class AddProject extends Component {
         }
     }
     static defaultProps = {
-        categories: ['Surveillance System', 'Lead Generation', "Security"]
+        categories: ['Select an option', 'Directions & Navigation', 'Web Scrapping', "Security"]
     }
     handleSubmit(e){
         e.preventDefault();
