@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import './App.css'
 import Projects from './Components/Projects';
+import logo from './logo.svg';
+import AddProject from './Components/AddProject';
 
 class Smk extends Component {
     constructor() {
         super();
         // State is always defined inside the constructor
         this.state = {
+            projects: []
+        };
+    }
+    componentWillMount(){
+        this.setState({
             projects: [
                 {
                     title: "Video Surveillance System",
@@ -19,14 +27,15 @@ class Smk extends Component {
                     title: "Road Navigator",
                     category: "Directions & Navigation"
                 }
-
             ]
-        };
+        })
     }
+
     render(){
         return (
             <div className="App">
-                <p>My Apps</p>
+                <h1>Self Projects <span><img src={logo} alt="Self Projects"/></span></h1>
+                <AddProject />
                 <Projects projects={this.state.projects}/>
 
             </div>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+    background: #eaeaea;
+}
+* {
+    font-family: 'Lato', sans-serif;
+}
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg); transform:rotate(360deg);
+        }
+}
+.App {
+    display: block;
+    padding: 2em;
+    max-width: 500px;
+    margin: 2em auto;
+    margin-top: 3em;
+    background: #fff;
+    box-shadow: 0px 3px 8px #ccc;
+}
+.App > h1 {
+    text-align: center;
+    letter-spacing: 1px;
+}
+.App > h1 > span {
+    display: inline-block;
+    width: 2.3em;
+}
+.App > h1 > span > img {
+    vertical-align: middle;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+.AddProject {
+    margin: 2em 0;
+}
+.input-field {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+.input-field label {
+    margin: 10px 0;
+    font-size: 1em;
+}
+.input-field input {
+    padding: .8em;
+    outline: none;
+}
+.input-field.input input {
+    border: 1px solid #eaeaea;
+    outline: none;
+    height: 1em;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.input-field.select select {
+    height: 3em;
+    display: block;
+    outline: none;
+    font-size: 1em;
+    background: #fff;
+    border: 1px solid #eaeaea;
+}
+.input-field.submit input[type="submit"] {
+    border: none;
+    height: 3em;
+    background: #3daafb;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.currentProjects {
+    margin: 2em 0;
+}
+.Projects {
+    padding: 0;
+}
+.ProjectItem {
+    margin: 1.5em 0;
+    background: #eaeaea;
+    padding: 1em;
+}
+.Projects .ProjectItem {
+    list-style: none;
+}
+.ProjectItem > h4 {
+    margin: 0.5em 0;
+}
+.Projects .ProjectItem small {
+    display: inline-block;
+    width: 70px;
+}
+.ProjectItem > p {
+    margin: 0.2em 0;
+}

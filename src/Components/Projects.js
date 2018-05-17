@@ -12,9 +12,12 @@ class Projects extends Component {
             })
         }
         return (
-            <ul className="Projects">
-                {projectNames}
-            </ul>
+            <div className="currentProjects">
+                <h2>Current Projects</h2>
+                <ul className="Projects">
+                    {projectNames}
+                </ul>
+            </div>
         )
     }
 }
