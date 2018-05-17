@@ -93,6 +93,7 @@ body {
     margin: 1.5em 0;
     background: #eaeaea;
     padding: 1em;
+    border-radius: 5px;
 }
 .Projects .ProjectItem {
     list-style: none;
@@ -113,6 +114,7 @@ body {
     right: 5%;
     top: 40%;
     border: none;
+    outline: none;
     height: 2em;
     cursor: pointer;
     color: #fff;
