@@ -112,4 +112,11 @@ body {
     position: absolute;
     right: 5%;
     top: 40%;
+    border: none;
+    height: 2em;
+    cursor: pointer;
+    color: #fff;
+    width: 2em;
+    border-radius: 32px;
+    background: #ec3333;
 }
