@@ -13,7 +13,7 @@ class AddProject extends Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        if(this.refs.title.value && this.refs.title.value){
+        if(this.refs.title.value && this.refs.category.value){
         this.setState({newProject:{
             id: uuid.v4(),
             title: this.refs.title.value,
