@@ -96,6 +96,7 @@ body {
 }
 .Projects .ProjectItem {
     list-style: none;
+    position: relative;
 }
 .ProjectItem > h4 {
     margin: 0.5em 0;
@@ -106,4 +107,9 @@ body {
 }
 .ProjectItem > p {
     margin: 0.2em 0;
+}
+.ProjectItem > .delete {
+    position: absolute;
+    right: 5%;
+    top: 40%;
 }
